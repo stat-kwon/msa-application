@@ -1,0 +1,30 @@
+### 전체 상품 조회
+GET http://localhost:8088/api/products
+Accept: application/json
+
+### 상품 단건 조회
+GET http://localhost:8088/api/products/1
+Accept: application/json
+
+### 새로운 product 추가
+POST http://localhost:8088/api/products
+Content-Type: application/json
+
+{
+  "name": "데스크탑",
+  "price" : 100000,
+  "stockQuantity": 15
+}
+
+### 상품 정보 변경
+PUT http://localhost:8088/api/products/1
+Content-Type: application/json
+
+{
+  "name" : "책상",
+  "price" : 500,
+  "stockQuantity" : 10
+}
+
+### 상품 삭제
+DELETE http://localhost:8088/api/products/1
